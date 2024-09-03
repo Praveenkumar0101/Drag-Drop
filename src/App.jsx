@@ -16,13 +16,13 @@ import "./App.css";
 
 export default function App() {
   const [tasks, setTasks] = useState([
-    { id: 1, title: "Add tests to homepage" },
-    { id: 2, title: "Fix styling in about section" },
-    { id: 3, title: "Learn how to center a div" },
+    { id: '1', title: "Add tests to homepage", imageUrl: 'https://wallpapercave.com/wp/wp3365565.jpg' },
+    { id: '2', title: "Fix styling in about section", imageUrl: 'https://th.bing.com/th/id/OIP.nM7rzrbFk-T2mn-usGVTDQHaE8?pid=ImgDet&w=474&h=316&rs=1' },
+    { id: '3', title: "Learn how to center a div", imageUrl: 'https://th.bing.com/th/id/OIP.1fuSDizuH1AhHs0ocWJMQAHaHa?w=512&h=512&rs=1&pid=ImgDetMain' },
   ]);
 
   const addTask = (title) => {
-    setTasks((tasks) => [...tasks, { id: tasks.length + 1, title }]);
+    setTasks((tasks) => [...tasks, { id: (tasks.length + 1).toString(), title }]);
   };
 
   const sensors = useSensors(
@@ -56,7 +56,7 @@ export default function App() {
         collisionDetection={closestCorners}
         onDragEnd={handleDragEnd}
       >
-        <Column id="toDo" tasks={tasks} />
+        <Column tasks={tasks} />
       </DndContext>
     </div>
   );

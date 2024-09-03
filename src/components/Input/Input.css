@@ -1,18 +1,54 @@
 .container {
   display: flex;
-  gap: 10px;
+  gap: 10px; 
+  flex-wrap: wrap;/
 }
 
+/* Styles for the input field */
 .input {
   border: 2px solid #ddd;
   border-radius: 10px;
   padding: 10px;
+  flex: 1; 
+  min-width: 200px; 
 }
 
+/* Styles for the button */
 .button {
   border: none;
   border-radius: 10px;
   padding: 10px 15px;
   background-color: #2563eb;
   color: white;
+  cursor: pointer; 
+}
+
+/* Media Queries */
+
+/* For tablets and smaller laptops */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; 
+    gap: 10px; 
+  }
+
+  .input {
+    min-width: 100%;
+  }
+
+  .button {
+    width: 100%; 
+  }
+}
+
+/* For smartphones */
+@media (max-width: 480px) {
+  .input {
+    padding: 8px; 
+  }
+
+  .button {
+    padding: 8px 10px; 
+    font-size: 14px;
+  }
 }

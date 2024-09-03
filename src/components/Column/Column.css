@@ -1,10 +1,41 @@
 .column {
-  background-color: #f2f2f3;
+  background-color: #f2f2f3; 
   border-radius: 5px;
   padding: 15px;
   width: 80%;
   max-width: 500px;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 15px; 
+}
+
+/* Additional styling for better visuals, if needed */
+.column .task {
+  background-color: #fff;
+  border: 1px solid #ddd; 
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries */
+
+/* For tablets and smaller laptops */
+@media (max-width: 768px) {
+  .column {
+    width: 90%; 
+    padding: 10px; 
+  }
+}
+
+/* For smartphones */
+@media (max-width: 480px) {
+  .column {
+    width: 100%; 
+    padding: 5px; 
+  }
+
+  .column .task {
+    padding: 8px; 
+  }
 }
